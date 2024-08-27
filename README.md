@@ -3,7 +3,8 @@ Welcome to my interactive portfolio website! This project showcases my work, ski
 
 ## Demo Video
 
-[Demo Video](portfolio_demo.mp4)
+[Watch the Demo Video](https://drive.google.com/file/d/184sUZUBpBBKMu4zd-84_qjSnpvmOYqRa/view?usp=sharing)
+
 
 
 ## Table of Contents
