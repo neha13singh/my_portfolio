@@ -1,6 +1,12 @@
 # Interactive Portfolio Website
 Welcome to my interactive portfolio website! This project showcases my work, skills, and achievements as a web developer. The site is built using EJS (Embedded JavaScript Templates), Express.js, RESTful APIs, and Bootstrap for styling.
 
+## Demo Video
+
+<video width="600" controls>
+  <source src="portfolio_demo.mp4" type="video/mp4">
+</video>
+
 ## Table of Contents
 - About the Project
 - Features
