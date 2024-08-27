@@ -3,9 +3,8 @@ Welcome to my interactive portfolio website! This project showcases my work, ski
 
 ## Demo Video
 
-<video width="600" controls>
-  <source src="portfolio_demo.mp4" type="video/mp4">
-</video>
+[Demo Video](portfolio_demo.mp4)
+
 
 ## Table of Contents
 - About the Project
