@@ -13,7 +13,57 @@
 
     <%-body%>
 
-   
+    <script>
+    // Typing effect
+    const texts = ['Software Developer', 'Problem Solver', 'Tech Enthusiast'];
+    let textIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+        const typingElement = document.querySelector('.typing-text');
+        if (!typingElement) return;
+
+        if (charIndex < texts[textIndex].length) {
+            typingElement.textContent += texts[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, 100);
+        } else {
+            setTimeout(erase, 2000);
+        }
+    }
+
+    function erase() {
+        const typingElement = document.querySelector('.typing-text');
+        if (!typingElement) return;
+
+        if (charIndex > 0) {
+            typingElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, 50);
+        } else {
+            textIndex = (textIndex + 1) % texts.length;
+            setTimeout(type, 500);
+        }
+    }
+
+    // Scroll animations
+    function handleScrollAnimations() {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (elementTop < windowHeight * 0.75) {
+                element.classList.add('fade-in');
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(type, 1000);
+        window.addEventListener('scroll', handleScrollAnimations);
+        handleScrollAnimations();
+    });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

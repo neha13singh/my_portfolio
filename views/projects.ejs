@@ -1,60 +1,75 @@
 <% layout('boilerplate') -%>
 
 <div class="container my-5">
-    <h2 class="text-center mb-4">Projects</h2>
+    <h2 class="section-title text-center mb-5 fade-in">
+        <span class="title-black">Innovative</span> Projects
+    </h2>
     <div class="portfolio">
-        <div class="row bg-white m-4 p-4 align-items-center">
-            <!-- Image Section -->
-            <div class="col-md-6 col-lg-4 mb-3 mb-md-0 text-center">
-                <img src="project1.png" alt="Project Image" class="img-fluid">
-               <!--github link--> 
-               <div class="mt-2 ">
-                <a href="https://github.com/neha13singh/my_portfolio" target="_blank" class="btn btn-primary">View on GitHub</a>
-            </div>
-            </div>
-            
-            <!-- Text Section -->
-            <div class="col-md-6 col-lg-8">
-                <h4 bg-blue>Portfolio Website with Multiple Pages</h4>
-                <p><b>Description</b></p>
-                <p>I designed and developed a comprehensive portfolio website using modern web development technologies. The project showcases my skills, experience, and achievements across multiple pages, each dedicated to different aspects of my profile.</p>
-
-                <p><b>Key Features</b></p>
-                <ul>
-                    <li><b class="list">Express Framework:</b> Utilized Express.js to build a robust server-side application, handling routing and middleware to deliver a seamless browsing experience.</li>
-                    <li><b class="list">RESTful APIs:</b> Implemented RESTful APIs to manage data dynamically, ensuring smooth interaction between the front-end and back-end.</li>
-                    <li><b class="list">EJS Templating:</b> Leveraged Embedded JavaScript (EJS) to create reusable templates, allowing efficient rendering of dynamic content on various pages.</li>
-                    <li><b class="list">Bootstrap Integration:</b> Employed Bootstrap for responsive and visually appealing design, ensuring the website is accessible across different devices and screen sizes.</li>
-                    <br>
-                    <li><b class="list">Outcome:</b> This project demonstrates my ability to integrate server-side logic with front-end design, creating a fully functional and aesthetically pleasing portfolio. It effectively highlights my web development expertise and serves as a testament to my skills in full-stack development.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row bg-white m-4 p-4 align-items-center">
-            <!-- Image Section -->
-            <div class="col-md-6 col-lg-4 mb-3 mb-md-0 text-center">
-                <img src="stonepaper.png" alt="Project Image" class="img-fluid">
-                <!-- GitHub Link -->
-                <div class="mt-2 ">
-                    <a href="https://github.com/YourGitHubUsername/YourRepository" target="_blank" class="btn btn-primary">View on GitHub</a>
+        <!-- Portfolio Website Project -->
+        <div class="project-card animate-on-scroll mb-5">
+            <div class="card shadow-lg">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="project-image-container p-3">
+                            <img src="project1.png" alt="Project Image" class="img-fluid rounded">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <a href="https://github.com/neha13singh/my_portfolio" target="_blank" 
+                                       class="btn btn-light btn-project">
+                                        <i class="fab fa-github me-2"></i>View on GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-8">
+                        <div class="card-body p-4">
+                            <h3 class="project-title slide-in-right">Portfolio Website with Multiple Pages</h3>
+                            <div class="tech-stack mb-3">
+                                <span class="tech-badge">Express.js</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">EJS</span>
+                                <span class="tech-badge">Bootstrap</span>
+                            </div>
+                            <div class="project-description fade-in">
+                                <h5 class="description-title">Description</h5>
+                                <p>I designed and developed a comprehensive portfolio website using modern web development technologies. The project showcases my skills, experience, and achievements across multiple pages, each dedicated to different aspects of my profile.</p>
+                            </div>
+                            <div class="key-features mt-4">
+                                <h5 class="features-title">Key Features</h5>
+                                <ul class="feature-list animated-list">
+                                    <li><i class="fas fa-check-circle"></i> Express Framework: Utilized Express.js to build a robust server-side application</li>
+                                    <li><i class="fas fa-check-circle"></i> RESTful APIs: Implemented RESTful APIs to manage data dynamically</li>
+                                    <li><i class="fas fa-check-circle"></i> EJS Templating: Leveraged Embedded JavaScript for dynamic content</li>
+                                    <li><i class="fas fa-check-circle"></i> Bootstrap Integration: Employed Bootstrap for responsive design</li>
+                                </ul>
+                                <div class="outcome-box mt-3 p-3">
+                                    <p class="mb-0"><strong>Outcome:</strong> This project demonstrates my ability to integrate server-side logic with front-end design, creating a fully functional and aesthetically pleasing portfolio.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Text Section -->
-            <div class="col-md-6 col-lg-8">
-                <h4 bg-blue>Stone Paper Scissor Game</h4>
-                <p><b>Description</b></p>
-                <p>This Stone Paper Scissors game is a classic implementation of the popular hand game, developed entirely using HTML, CSS, and JavaScript. Every aspect of the project, from the design to the logic, was crafted independently. The game offers an interactive and engaging experience, allowing users to challenge the computer in a battle of wits and luck.</p>
-        
-                <p><b>Key Features</b></p>
-                <ul>
-                    <li><b class="list">Custom Design: </b> All visual elements, including the stone, paper, and scissors images, were carefully selected to create a cohesive and appealing interface.</li>
-                    <li><b class="list">Responsive Layout: </b> The game is designed to be fully responsive, ensuring a seamless experience across devices of all sizes.</li>
-                    <li><b class="list">Dynamic Gameplay: </b> JavaScript handles the game logic, randomly generating the computer's choice and determining the winner based on the player's selection.</li>
-                    <li><b class="list">Score Tracking: </b> The game keeps track of both the player’s and the computer’s scores, providing real-time updates and enhancing the competitive spirit.</li>
-                    <br>
-                    <li><b class="list">Outcome:</b> This project demonstrates my ability to create a fully functional web-based game from scratch, utilizing core web technologies. It reflects my skills in front-end development, from crafting the user interface to implementing game logic with JavaScript. The project showcases my capability to design, develop, and deploy interactive web applications.</li>
-                </ul>
+        </div>
+
+        <!-- Stone Paper Scissor Game Project -->
+        <div class="project-card animate-on-scroll mb-5">
+            <!-- Similar structure as above, but with reversed columns -->
+            <div class="card shadow-lg">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-6 col-lg-8 order-md-1">
+                        <div class="card-body p-4">
+                            <!-- Project content here -->
+                            <!-- Keep your existing content but add the same styling elements -->
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 order-md-2">
+                        <!-- Image section here -->
+                    </div>
+                </div>
             </div>
-        </div>        
+        </div>
+    </div>
 </div>

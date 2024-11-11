@@ -1,46 +1,61 @@
 <% layout('boilerplate') -%>
 <div class="container my-5">
-  <div class="row">
-    <!-- Profile Picture and Social Profiles -->
-    <div class=" profile-container col-md-4 text-center mt-4">
-      <img src="photo.jpg" class="profile img-fluid-profile custom-rectangle shadow-lg mb-4" alt="Your Picture">
+  <div class="row align-items-center justify-content-center">
+    <div class="col-md-10">
+      <div class="profile-card p-4 animate-on-scroll">
+        <div class="row align-items-center">
+          <!-- Profile Image Column -->
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <div class="profile-image-wrapper">
+              <img src="photo.jpg" alt="profile" class="profile-image">
+              <div class="profile-image-overlay">
+                <div class="overlay-content">
+                  <span class="typing-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <!-- Social Profiles and Contact Me Section -->
-      <div class="d-flex flex-column align-items-center mt-3">
-        <!-- Social Profiles -->
-        <div class="d-flex mb-3">
-          <a href="https://www.linkedin.com/in/neha-singh-a55254220/" class="btn btn-primary me-2 social-links" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-          <a href="https://github.com/neha13singh" class="btn btn-dark" target="_blank">
-            <i class="fab fa-github social-links"></i> GitHub
-          </a>
-        </div>
+          <!-- Content Column -->
+          <div class="col-md-8">
+            <div class="profile-content fade-in">
+              <!-- Name and Title with Typing Effect -->
+              <div class="text-md-start text-center mb-4">
+                <h1 class="name slide-in-left">Neha Singh</h1>
+                <h2 class="profession slide-in-right">Software Developer</h2>
+              </div>
 
-        <!-- Contact Me -->
-        <div class="text-center">
-          <a href="mailto:neha786.india@gmail.com" class="btn btn-outline-primary fs-5 contact-me">Mail me</a>
-          <p class="fs-5 mb-4">Feel free to reach out to me</p>
-          
+              <!-- About Me with Fade Effect -->
+              <div class="about-section fade-in-up">
+                <p class="about-text">
+                  My expertise lies in transforming creative ideas into reality through code. I enjoy building user-friendly websites 
+                  and applications that not only look good but also perform exceptionally well.
+                </p>
+                <p class="about-text highlight-text">
+                  Whether it's designing intuitive user interfaces or optimizing backend processes, I thrive on solving complex challenges.
+                </p>
+                <p class="about-text">
+                  Beyond coding, I am curious about emerging technologies and continuously exploring new tools and frameworks 
+                  to stay ahead in the tech world.
+                </p>
+              </div>
+
+              <!-- Social Links with Hover Effects -->
+              <div class="social-links mt-4 bounce-in">
+                <a href="https://github.com/neha13singh" target="_blank" class="social-btn pulse">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/neha-singh-8b5b07226/" target="_blank" class="social-btn pulse">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:nehasingh134202@gmail.com" class="social-btn pulse">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- About Me Section -->
-    <div class="col-md-8 mt-3">
-      <h2 class="font-weight-bold mb-4 aboutme">About Me</h2>
-      <p class="fs-5">
-        Hi, I'm <strong>Neha Singh</strong>, a passionate and driven software engineer currently pursuing my studies at <strong>IET Lucknow</strong>. With a strong foundation in <strong>Data Structures and Algorithms (DSA)</strong> and comprehensive experience in <strong>Web Development</strong>, both frontend and backend, I'm on a journey to craft seamless and efficient digital solutions.
-      </p>
-      <p class="fs-5">
-        I'm currently seeking opportunities to apply my skills in a dynamic and innovative environment where I can continue to grow and contribute as a <strong>Web Developer and Software Engineer</strong>. If you're looking for someone who is dedicated, eager to learn, and ready to take on new challenges, let's connect!
-      </p>
-      <p class="fs-5">
-        My expertise lies in transforming creative ideas into reality through code. I enjoy building user-friendly websites and applications that not only look good but also perform exceptionally well. Whether it's designing intuitive user interfaces or optimizing backend processes, I thrive on solving complex challenges.
-      </p>
-      <p class="fs-5 mb-4">
-        Beyond coding, I am curious about emerging technologies and continuously exploring new tools and frameworks to stay ahead in the tech world.
-      </p>
     </div>
   </div>
 </div>
