@@ -1535,3 +1535,49 @@ h4, .aboutme {
     margin-bottom: 1rem;
 }
 
+/* Project Image Responsive Sizing */
+.project-header {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Added max-width to limit overall size */
+    margin: 0 auto; /* Center the container */
+}
+
+.project-image {
+    position: relative;
+    width: 100%;
+    padding-top: 45%; /* Reduced from 56.25% for smaller height */
+    background: #ffffff;
+}
+
+.project-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1.5rem; /* Increased padding to make image smaller */
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 768px) {
+    .project-image {
+        padding-top: 60%; /* Reduced from 75% */
+    }
+    
+    .project-image img {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-image {
+        padding-top: 80%; /* Reduced from 100% */
+    }
+    
+    .project-image img {
+        padding: 0.75rem;
+    }
+}
+
