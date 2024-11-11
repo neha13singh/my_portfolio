@@ -1,8 +1,17 @@
+/* Color Variables */
+:root {
+    --dark-orange: #e63900;     /* Darker shade for primary actions */
+    --main-orange: #ff6b2b;     /* Main brand color */
+    --light-orange: #ff9a5f;    /* Lighter shade for hover states */
+    --pale-orange: #fff0e6;     /* Very light shade for backgrounds */
+    --orange-shadow: rgba(230, 57, 0, 0.2); /* Shadow color */
+}
+
 /* Global Styles */
 body {
     margin-top: 70px !important;
     color: rgb(51, 51, 51) !important;
-    background-color: #fff9f5 !important;
+    background-color: var(--pale-orange) !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -11,7 +20,7 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
-    color: #ff6b2b;
+    color: var(--dark-orange);
 }
 
 h4, .aboutme {
@@ -41,7 +50,7 @@ h4, .aboutme {
 }
 
 .navbar-brand {
-    color: #ff7e3d !important;
+    color: var(--dark-orange) !important;
     font-weight: 700;
     font-size: 1.5rem;
     letter-spacing: 1px;
@@ -49,7 +58,7 @@ h4, .aboutme {
 }
 
 .navbar-brand:hover {
-    color: #ff9a5f !important;
+    color: var(--light-orange) !important;
     transform: translateY(-2px);
 }
 
@@ -69,13 +78,13 @@ h4, .aboutme {
     height: 2px;
     bottom: 0;
     left: 50%;
-    background-color: #ff7e3d;
+    background-color: var(--dark-orange);
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
 
 .nav-link:hover {
-    color: #ff7e3d !important;
+    color: var(--dark-orange) !important;
 }
 
 .nav-link:hover::after {
@@ -83,7 +92,7 @@ h4, .aboutme {
 }
 
 .nav-link.active {
-    color: #ff7e3d !important;
+    color: var(--dark-orange) !important;
 }
 
 .nav-link.active::after {
@@ -151,14 +160,14 @@ h4, .aboutme {
 
 /* Button Styling */
 .btn-primary {
-    background-color: #ff6b2b !important;
-    border-color: #ff6b2b !important;
+    background-color: var(--dark-orange) !important;
+    border-color: var(--dark-orange) !important;
     transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #ff4500 !important;
-    border-color: #ff4500 !important;
+    background-color: var(--main-orange) !important;
+    border-color: var(--main-orange) !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(255, 106, 0, 0.2);
 }
@@ -255,10 +264,10 @@ h4, .aboutme {
 .profile-card {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(255, 107, 43, 0.1);
+    box-shadow: 0 15px 35px var(--orange-shadow);
     overflow: hidden;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 107, 43, 0.1);
+    border: 1px solid rgba(230, 57, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -276,7 +285,7 @@ h4, .aboutme {
 .name {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #ff6b2b;
+    color: var(--dark-orange);
     margin-bottom: 0.5rem;
     text-shadow: 2px 2px 4px rgba(255, 107, 43, 0.1);
 }
@@ -310,7 +319,7 @@ h4, .aboutme {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ff6b2b;
+    background: linear-gradient(45deg, var(--dark-orange), var(--light-orange));
     color: white;
     font-size: 1.2rem;
     text-decoration: none;
@@ -318,7 +327,7 @@ h4, .aboutme {
 }
 
 .social-btn:hover {
-    background: #ff8c00;
+    background: var(--light-orange);
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(255, 107, 43, 0.3);
@@ -463,7 +472,10 @@ h4, .aboutme {
 
 /* Highlight Text Effect */
 .highlight-text {
-    background: linear-gradient(120deg, rgba(255, 107, 43, 0.2) 0%, rgba(255, 107, 43, 0.1) 100%);
+    background: linear-gradient(120deg, 
+        rgba(230, 57, 0, 0.1) 0%, 
+        rgba(255, 154, 95, 0.1) 100%
+    );
     padding: 10px;
     border-radius: 8px;
     transform: translateZ(0);
@@ -471,7 +483,10 @@ h4, .aboutme {
 }
 
 .highlight-text:hover {
-    background: linear-gradient(120deg, rgba(255, 107, 43, 0.3) 0%, rgba(255, 107, 43, 0.2) 100%);
+    background: linear-gradient(120deg, 
+        rgba(230, 57, 0, 0.2) 0%, 
+        rgba(255, 154, 95, 0.2) 100%
+    );
     transform: translateY(-2px);
 }
 
@@ -539,7 +554,7 @@ h4, .aboutme {
     height: 2px;
     bottom: 0;
     left: 50%;
-    background-color: #ff7e3d;
+    background-color: var(--dark-orange);
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -551,12 +566,12 @@ h4, .aboutme {
 }
 
 .nav-link.active {
-    color: #ff7e3d !important;
+    color: var(--dark-orange) !important;
     font-weight: 600;
 }
 
 .nav-link:hover {
-    color: #ff7e3d !important;
+    color: var(--dark-orange) !important;
 }
 
 /* Mobile navbar styles */
@@ -582,7 +597,7 @@ h4, .aboutme {
 /* Projects Page Styling */
 .section-title {
     font-size: 2.5rem;
-    color: #ff7e3d;
+    color: var(--dark-orange);
     margin-bottom: 2rem;
     position: relative;
     padding-bottom: 1rem;
@@ -596,7 +611,7 @@ h4, .aboutme {
     transform: translateX(-50%);
     width: 100px;
     height: 3px;
-    background: linear-gradient(to right, #ff7e3d, #ff9a5f);
+    background: linear-gradient(to right, var(--dark-orange), var(--light-orange));
 }
 
 .project-card {
@@ -659,12 +674,12 @@ h4, .aboutme {
     font-size: 1rem;
     font-weight: 600;
     color: white;
-    background-color: #ff7e3d;
+    background-color: var(--dark-orange);
     transition: all 0.3s ease;
 }
 
 .btn-project:hover {
-    background-color: #ff9a5f;
+    background-color: var(--main-orange);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(255, 106, 0, 0.2);
 }
@@ -675,7 +690,7 @@ h4, .aboutme {
 }
 
 .project-title {
-    color: #ff7e3d;
+    color: var(--dark-orange);
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -684,7 +699,7 @@ h4, .aboutme {
 }
 
 .tech-badge {
-    background: linear-gradient(45deg, #ff7e3d, #ff9a5f);
+    background: linear-gradient(45deg, var(--dark-orange), var(--light-orange));
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -716,17 +731,17 @@ h4, .aboutme {
     position: absolute;
     left: 0;
     top: 4px;
-    color: #ff7e3d;
+    color: var(--dark-orange);
 }
 
 .feature-list li:hover {
     transform: translateX(10px);
-    color: #ff7e3d;
+    color: var(--dark-orange);
 }
 
 .outcome-box {
     background: linear-gradient(45deg, rgba(255, 126, 61, 0.1), rgba(255, 154, 95, 0.1));
-    border-left: 4px solid #ff7e3d;
+    border-left: 4px solid var(--dark-orange);
     border-radius: 0 8px 8px 0;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -753,7 +768,7 @@ h4, .aboutme {
     transform: translateX(-50%);
     width: 100px;
     height: 3px;
-    background: linear-gradient(to right, #333, #ff7e3d);
+    background: linear-gradient(to right, #333, var(--dark-orange));
 }
 
 /* Add animation for the title */
@@ -808,7 +823,7 @@ h4, .aboutme {
 }
 
 .education-title {
-    color: #ff7e3d;
+    color: var(--dark-orange);
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -817,7 +832,7 @@ h4, .aboutme {
 }
 
 .education-badge {
-    background: linear-gradient(45deg, #ff7e3d, #ff9a5f);
+    background: linear-gradient(45deg, var(--dark-orange), var(--light-orange));
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -835,7 +850,7 @@ h4, .aboutme {
 
 .year-badge {
     background: white;
-    color: #ff7e3d;
+    color: var(--dark-orange);
     padding: 0.5rem 1.5rem;
     border-radius: 20px;
     font-weight: 600;
@@ -844,7 +859,7 @@ h4, .aboutme {
 
 .achievement-box {
     background: linear-gradient(45deg, rgba(255, 126, 61, 0.1), rgba(255, 154, 95, 0.1));
-    border-left: 4px solid #ff7e3d;
+    border-left: 4px solid var(--dark-orange);
     border-radius: 0 8px 8px 0;
     padding: 1.5rem;
     transition: all 0.3s ease;
@@ -866,7 +881,7 @@ h4, .aboutme {
 }
 
 .progress-bar {
-    background: linear-gradient(45deg, #ff7e3d, #ff9a5f);
+    background: linear-gradient(45deg, var(--dark-orange), var(--light-orange));
     transition: width 1.5s ease;
 }
 
@@ -874,7 +889,7 @@ h4, .aboutme {
     position: absolute;
     right: 0;
     top: -25px;
-    color: #ff7e3d;
+    color: var(--dark-orange);
     font-weight: 600;
     font-size: 1.1rem;
 }
@@ -913,7 +928,7 @@ h4, .aboutme {
 }
 
 .skill-title {
-    color: #ff7e3d;
+    color: var(--dark-orange);
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -939,7 +954,7 @@ h4, .aboutme {
 }
 
 .skill-badge {
-    background: linear-gradient(45deg, #ff7e3d, #ff9a5f);
+    background: linear-gradient(45deg, var(--dark-orange), var(--light-orange));
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -1100,7 +1115,7 @@ h4, .aboutme {
     padding: 1rem;
     margin-top: 0;
     background: linear-gradient(45deg, rgba(255, 126, 61, 0.1), rgba(255, 154, 95, 0.1));
-    border-left: 4px solid #ff7e3d;
+    border-left: 4px solid var(--dark-orange);
     border-radius: 0 8px 8px 0;
 }
 
@@ -1115,12 +1130,12 @@ h4, .aboutme {
 }
 
 .achievement-box::-webkit-scrollbar-thumb {
-    background: #ff7e3d;
+    background: var(--dark-orange);
     border-radius: 3px;
 }
 
 .achievement-box::-webkit-scrollbar-thumb:hover {
-    background: #ff6b2b;
+    background: var(--light-orange);
 }
 
 /* Feature List Styling */
@@ -1144,7 +1159,7 @@ h4, .aboutme {
     position: absolute;
     left: 0;
     top: 4px;
-    color: #ff7e3d;
+    color: var(--dark-orange);
 }
 
 /* Achievement Page Styling */
@@ -1193,7 +1208,7 @@ h4, .aboutme {
 }
 
 .achievement-title {
-    color: #ff7e3d;
+    color: var(--dark-orange);
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -1203,7 +1218,7 @@ h4, .aboutme {
 
 .achievement-box {
     background: linear-gradient(45deg, rgba(255, 126, 61, 0.1), rgba(255, 154, 95, 0.1));
-    border-left: 4px solid #ff7e3d;
+    border-left: 4px solid var(--dark-orange);
     border-radius: 0 8px 8px 0;
     padding: 1rem;
     min-height: auto;
@@ -1249,13 +1264,13 @@ h4, .aboutme {
 }
 
 .profile-title {
-    color: #ff7e3d;
+    color: var(--dark-orange);
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
 }
 
 .custom-btn {
-    background: linear-gradient(45deg, #ff7e3d, #ff9a5f);
+    background: linear-gradient(45deg, var(--dark-orange), var(--light-orange));
     color: white;
     padding: 0.5rem 1.5rem;
     border-radius: 25px;
@@ -1331,7 +1346,7 @@ h4, .aboutme {
 
 .certificate .achievement-box {
     background: linear-gradient(45deg, rgba(255, 126, 61, 0.1), rgba(255, 154, 95, 0.1));
-    border-left: 4px solid #ff7e3d;
+    border-left: 4px solid var(--dark-orange);
     border-radius: 0 8px 8px 0;
     padding: 1rem;
     margin: 0;
@@ -1384,7 +1399,7 @@ h4, .aboutme {
     border: 1px solid rgba(255, 126, 61, 0.2);
     border-radius: 20px;
     font-size: 0.85rem;
-    color: #ff7e3d;
+    color: var(--dark-orange);
 }
 
 /* Project Cards Styling */
@@ -1440,7 +1455,7 @@ h4, .aboutme {
 
 .project-btn {
     padding: 0.8rem 1.5rem;
-    background: #ff7e3d;
+    background: var(--dark-orange);
     color: white;
     border-radius: 25px;
     text-decoration: none;
@@ -1448,7 +1463,7 @@ h4, .aboutme {
 }
 
 .project-btn:hover {
-    background: #ff9a5f;
+    background: var(--main-orange);
     color: white;
     transform: translateY(-2px);
 }
@@ -1458,7 +1473,7 @@ h4, .aboutme {
 }
 
 .project-title {
-    color: #ff7e3d;
+    color: var(--dark-orange);
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -1475,7 +1490,7 @@ h4, .aboutme {
     border: 1px solid rgba(255, 126, 61, 0.2);
     border-radius: 20px;
     font-size: 0.85rem;
-    color: #ff7e3d;
+    color: var(--dark-orange);
 }
 
 .project-info {
@@ -1494,12 +1509,12 @@ h4, .aboutme {
 }
 
 .feature-list i {
-    color: #ff7e3d;
+    color: var(--dark-orange);
     margin-right: 0.5rem;
 }
 
 .features-section h5 {
-    color: #ff7e3d;
+    color: var(--dark-orange);
     margin-bottom: 1rem;
 }
 
@@ -1557,7 +1572,7 @@ h4, .aboutme {
 
 .mega-title {
     font-size: 3.5rem;
-    background: linear-gradient(45deg, #ff7e3d, #ff9a5f);
+    background: linear-gradient(45deg, var(--dark-orange), var(--light-orange));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
@@ -1575,7 +1590,7 @@ h4, .aboutme {
 }
 
 .role-badge {
-    background: linear-gradient(45deg, #ff7e3d, #ff9a5f);
+    background: linear-gradient(45deg, var(--dark-orange), var(--light-orange));
     color: white;
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
@@ -1613,7 +1628,7 @@ h4, .aboutme {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg, #ff7e3d, #ff9a5f);
+    background: linear-gradient(45deg, var(--dark-orange), var(--light-orange));
     color: white;
     font-size: 1.3rem;
     transition: all 0.3s ease;
@@ -1752,4 +1767,22 @@ h4, .aboutme {
         width: 200px;
         height: 250px;
     }
+}
+
+/* Add this new animation for the waving hand */
+.waving-hand {
+    display: inline-block;
+    animation: waving 2.5s ease-in-out infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes waving {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
 }
