@@ -1784,8 +1784,16 @@ h4, .aboutme {
 /* Add this new animation for the waving hand */
 .waving-hand {
     display: inline-block;
+    font-size: 40px;  /* Increased size */
+    margin-left: 15px;
     animation: waving 2.5s ease-in-out infinite;
     transform-origin: 70% 70%;
+    position: relative;
+    opacity: 1 !important; /* Force opacity */
+    color: #ff6b2b !important; /* Use your theme orange color */
+    -webkit-text-fill-color: initial !important; /* Override any fill color */
+    background: none !important; /* Remove any background */
+    text-shadow: none; /* Remove shadow if causing issues */
 }
 
 @keyframes waving {
@@ -1797,4 +1805,10 @@ h4, .aboutme {
     50% { transform: rotate(10deg); }
     60% { transform: rotate(0deg); }
     100% { transform: rotate(0deg); }
+}
+
+/* Optional: Add hover effect */
+.waving-hand:hover {
+    animation-duration: 1s;
+    cursor: default;
 }
