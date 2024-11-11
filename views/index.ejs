@@ -2,28 +2,53 @@
 <div class="container my-5">
   <div class="row align-items-center justify-content-center">
     <div class="col-md-10">
-      <!-- Stylish Intro Header -->
-      <div class="intro-header text-center mb-5 animate-on-scroll">
-        <h1 class="mega-title fade-in">
-          Hi, I'm <span class="highlight-name">Neha Singh</span><span class="waving-hand">👋</span>
+      <!-- Enhanced Interactive Intro Header -->
+      <div class="intro-header text-center mb-5 animate-on-scroll" style="transform-style: preserve-3d;">
+        <h1 class="mega-title fade-in" style="font-size: clamp(2.5rem, 5vw, 3.5rem); background: linear-gradient(45deg, #ff4500, #ff8c5a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; position: relative;">
+          Hi, I'm 
+          <span class="highlight-name" style="position: relative; display: inline-block; transition: all 0.3s ease;" 
+                onmouseover="this.style.transform='translateY(-5px)'" 
+                onmouseout="this.style.transform='translateY(0)'">
+            Neha Singh
+            <span style="position: absolute; bottom: -3px; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #ff4500, transparent);"></span>
+          </span>
+          <span class="waving-hand" style="display: inline-block; cursor: pointer;" 
+                onclick="this.style.animation='wave 0.5s infinite'">👋</span>
         </h1>
-        <div class="role-container slide-in-up">
-          <h2 class="role-title">
-            <span class="role-badge">Full Stack Developer</span>
-            <span class="role-divider">|</span>
-            <span class="role-badge">ECE Student</span>
+
+        <!-- Enhanced Role Container -->
+        <div class="role-container slide-in-up" style="margin-top: 2rem;">
+          <h2 class="role-title" style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <span class="role-badge" style="background: #fff; color: #ff4500; padding: 0.8rem 1.5rem; border-radius: 50px; font-size: clamp(0.9rem, 2vw, 1.2rem); border: 2px solid #ff4500; transition: all 0.3s ease; cursor: pointer;"
+                  onmouseover="this.style.background='#ff4500'; this.style.color='white';" 
+                  onmouseout="this.style.background='#fff'; this.style.color='#ff4500';">
+              Full Stack Developer
+            </span>
+            <span class="role-divider" style="color: #ff4500;">|</span>
+            <span class="role-badge" style="background: #fff; color: #ff4500; padding: 0.8rem 1.5rem; border-radius: 50px; font-size: clamp(0.9rem, 2vw, 1.2rem); border: 2px solid #ff4500; transition: all 0.3s ease; cursor: pointer;"
+                  onmouseover="this.style.background='#ff4500'; this.style.color='white';" 
+                  onmouseout="this.style.background='#fff'; this.style.color='#ff4500';">
+              ECE Student
+            </span>
           </h2>
         </div>
       </div>
 
-      <div class="profile-card p-4 animate-on-scroll">
+      <!-- Enhanced Profile Card -->
+      <div class="profile-card p-4 animate-on-scroll" style="background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(255,69,0,0.1); border: 1px solid rgba(255,69,0,0.1); transition: all 0.3s ease;"
+           onmouseover="this.style.transform='translateY(-5px)'" 
+           onmouseout="this.style.transform='translateY(0)'">
         <div class="row align-items-center">
-          <!-- Profile Image Column with Social Links -->
+          <!-- Enhanced Profile Image Section -->
           <div class="col-md-4 text-center mb-4 mb-md-0">
-            <div class="profile-image-container mb-3">
-                <img src="photo.jpg" alt="Neha Singh" class="profile-image">
+            <div class="profile-image-container mb-3" style="position: relative; overflow: hidden; border: 3px solid #ff4500; transition: all 0.5s ease;"
+                 onmouseover="this.style.transform='scale(1.02)'" 
+                 onmouseout="this.style.transform='scale(1)'">
+              <img src="photo.jpg" alt="Neha Singh" class="profile-image" style="transition: transform 0.5s ease;"
+                   onmouseover="this.style.transform='scale(1.1)'" 
+                   onmouseout="this.style.transform='scale(1)'">
             </div>
-            <!-- Social Links moved here -->
+            <!-- Original Social Links Preserved -->
             <div class="social-links bounce-in">
               <a href="https://github.com/neha13singh" target="_blank" class="social-btn pulse">
                 <i class="fab fa-github"></i>
@@ -37,19 +62,24 @@
             </div>
           </div>
 
-          <!-- Content Column -->
+          <!-- Enhanced Content Column -->
           <div class="col-md-8">
             <div class="profile-content fade-in">
-              <!-- About Me with Fade Effect -->
               <div class="about-section fade-in-up">
-                <p class="about-text">
+                <p class="about-text" style="font-size: clamp(1rem, 2vw, 1.1rem); line-height: 1.8; color: #333; transition: all 0.3s ease;"
+                   onmouseover="this.style.transform='translateX(10px)'; this.style.color='#ff4500';" 
+                   onmouseout="this.style.transform='translateX(0)'; this.style.color='#333';">
                   My expertise lies in transforming creative ideas into reality through code. I enjoy building user-friendly websites 
                   and applications that not only look good but also perform exceptionally well.
                 </p>
-                <p class="about-text highlight-text">
+                <p class="about-text highlight-text" style="font-size: clamp(1rem, 2vw, 1.1rem); line-height: 1.8; color: #ff4500; border-left: 3px solid #ff4500; padding-left: 1rem; background: linear-gradient(45deg, rgba(255,69,0,0.1), transparent); transition: all 0.3s ease;"
+                   onmouseover="this.style.transform='scale(1.02)'" 
+                   onmouseout="this.style.transform='scale(1)'">
                   Whether it's designing intuitive user interfaces or optimizing backend processes, I thrive on solving complex challenges.
                 </p>
-                <p class="about-text">
+                <p class="about-text" style="font-size: clamp(1rem, 2vw, 1.1rem); line-height: 1.8; color: #333; transition: all 0.3s ease;"
+                   onmouseover="this.style.transform='translateX(10px)'; this.style.color='#ff4500';" 
+                   onmouseout="this.style.transform='translateX(0)'; this.style.color='#333';">
                   Beyond coding, I am curious about emerging technologies and continuously exploring new tools and frameworks 
                   to stay ahead in the tech world.
                 </p>
@@ -61,3 +91,23 @@
     </div>
   </div>
 </div>
+
+<style>
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container { padding: 1rem; }
+  .profile-card { padding: 1.5rem !important; }
+  .about-text { font-size: 1rem !important; }
+}
+</style>
