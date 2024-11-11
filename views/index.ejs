@@ -39,7 +39,13 @@
       </div>
 
       <!-- Enhanced Profile Card -->
-      <div class="profile-card p-4 animate-on-scroll" style="background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(255,69,0,0.1); border: 1px solid rgba(255,69,0,0.1); transition: all 0.3s ease;"
+      <div class="profile-card p-4 animate-on-scroll" 
+           style="background: rgba(0, 0, 0, 0.9); 
+                  border-radius: 20px; 
+                  box-shadow: 0 10px 30px rgba(255,69,0,0.2); 
+                  border: 1px solid rgba(255,69,0,0.2); 
+                  transition: all 0.3s ease;
+                  color: white;"
            onmouseover="this.style.transform='translateY(-5px)'" 
            onmouseout="this.style.transform='translateY(0)'">
         <div class="row align-items-center">
@@ -79,20 +85,20 @@
           <div class="col-md-8">
             <div class="profile-content fade-in">
               <div class="about-section fade-in-up">
-                <p class="about-text" style="font-size: clamp(1rem, 2vw, 1.1rem); line-height: 1.8; color: #333; transition: all 0.3s ease;"
+                <p class="about-text" style="font-size: clamp(1rem, 2vw, 1.1rem); line-height: 1.8; color: #ffffff; transition: all 0.3s ease;"
                    onmouseover="this.style.transform='translateX(10px)'; this.style.color='#ff4500';" 
-                   onmouseout="this.style.transform='translateX(0)'; this.style.color='#333';">
+                   onmouseout="this.style.transform='translateX(0)'; this.style.color='#ffffff';">
                   My expertise lies in transforming creative ideas into reality through code. I enjoy building user-friendly websites 
                   and applications that not only look good but also perform exceptionally well.
                 </p>
-                <p class="about-text highlight-text" style="font-size: clamp(1rem, 2vw, 1.1rem); line-height: 1.8; color: #ff4500; border-left: 3px solid #ff4500; padding-left: 1rem; background: linear-gradient(45deg, rgba(255,69,0,0.1), transparent); transition: all 0.3s ease;"
+                <p class="about-text highlight-text" style="font-size: clamp(1rem, 2vw, 1.1rem); line-height: 1.8; color: #ff4500; border-left: 3px solid #ff4500; padding-left: 1rem; background: linear-gradient(45deg, rgba(255,69,0,0.2), transparent); transition: all 0.3s ease;"
                    onmouseover="this.style.transform='scale(1.02)'" 
                    onmouseout="this.style.transform='scale(1)'">
                   Whether it's designing intuitive user interfaces or optimizing backend processes, I thrive on solving complex challenges.
                 </p>
-                <p class="about-text" style="font-size: clamp(1rem, 2vw, 1.1rem); line-height: 1.8; color: #333; transition: all 0.3s ease;"
+                <p class="about-text" style="font-size: clamp(1rem, 2vw, 1.1rem); line-height: 1.8; color: #ffffff; transition: all 0.3s ease;"
                    onmouseover="this.style.transform='translateX(10px)'; this.style.color='#ff4500';" 
-                   onmouseout="this.style.transform='translateX(0)'; this.style.color='#333';">
+                   onmouseout="this.style.transform='translateX(0)'; this.style.color='#ffffff';">
                   Beyond coding, I am curious about emerging technologies and continuously exploring new tools and frameworks 
                   to stay ahead in the tech world.
                 </p>
@@ -182,11 +188,11 @@
 /* Enhanced card styles */
 .profile-card {
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.9) !important;
+  background: rgba(0, 0, 0, 0.9) !important;
   border: 1px solid rgba(255, 69, 0, 0.2) !important;
   box-shadow: 
-    0 10px 30px rgba(255, 69, 0, 0.1),
-    inset 0 0 20px rgba(255, 255, 255, 0.5) !important;
+    0 10px 30px rgba(255, 69, 0, 0.2),
+    inset 0 0 20px rgba(255, 69, 0, 0.1) !important;
 }
 
 /* Text hover effects */
@@ -203,7 +209,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(255, 69, 0, 0.1), transparent);
+  background: linear-gradient(45deg, rgba(255, 69, 0, 0.2), transparent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -251,6 +257,49 @@
   }
   .animated-background::after {
     opacity: 0.5;
+  }
+}
+
+/* Update profile image container for dark theme */
+.profile-image-container {
+  border-color: #ff4500 !important;
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.3);
+}
+
+/* Update social buttons for dark theme */
+.social-btn {
+  background: linear-gradient(45deg, #ff4500, #ff8c5a) !important;
+  color: white !important;
+  box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
+}
+
+.social-btn:hover {
+  background: #333 !important;
+  transform: translateY(-5px);
+}
+
+/* Update text hover effects for dark theme */
+.about-text::before {
+  background: linear-gradient(45deg, rgba(255, 69, 0, 0.2), transparent);
+}
+
+/* Update hover states for better visibility */
+.about-text:hover {
+  color: #ff4500 !important;
+}
+
+/* Mobile Optimization adjustments */
+@media (max-width: 768px) {
+  .profile-card {
+    background: rgba(0, 0, 0, 0.95) !important;
+  }
+  
+  .about-text {
+    color: #ffffff !important;
+  }
+  
+  .about-text:hover {
+    color: #ff4500 !important;
   }
 }
 </style>
