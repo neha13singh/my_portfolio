@@ -1,4 +1,7 @@
 <% layout('boilerplate') -%>
+<!-- Add the background div right after the layout declaration -->
+<div class="animated-background"></div>
+
 <div class="container my-5">
   <div class="row align-items-center justify-content-center">
     <div class="col-md-10">
@@ -103,6 +106,7 @@
 </div>
 
 <style>
+/* Remove duplicate keyframes and consolidate animations */
 @keyframes wave {
   0% { transform: rotate(0deg); }
   10% { transform: rotate(14deg); }
@@ -114,74 +118,65 @@
   100% { transform: rotate(0deg); }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .container { padding: 1rem; }
-  .profile-card { padding: 1.5rem !important; }
-  .about-text { font-size: 1rem !important; }
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
 }
 
-/* Custom background animation */
-.home-background {
+@keyframes backgroundShift {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes patternMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+@keyframes floatingDots {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(20px) rotate(5deg); }
+}
+
+/* Background styles */
+.animated-background {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: 
+    linear-gradient(120deg, #fff5f2, #fff9f7),
+    radial-gradient(circle at top left, rgba(255, 69, 0, 0.15), transparent 50%),
+    radial-gradient(circle at top right, rgba(255, 140, 90, 0.15), transparent 50%),
+    radial-gradient(circle at bottom left, rgba(255, 99, 71, 0.15), transparent 50%),
+    radial-gradient(circle at bottom right, rgba(255, 127, 80, 0.15), transparent 50%);
+  background-blend-mode: screen;
+  animation: backgroundShift 15s ease-in-out infinite;
+}
+
+.animated-background::before {
+  content: '';
+  position: absolute;
   width: 100%;
   height: 100%;
   background: 
-    linear-gradient(120deg, rgba(255, 240, 230, 0.8), rgba(255, 250, 245, 0.9)),
-    repeating-linear-gradient(45deg, rgba(255, 69, 0, 0.05) 0px, rgba(255, 69, 0, 0.05) 2px, transparent 2px, transparent 8px);
-  z-index: -1;
-  animation: gradientMove 15s ease infinite;
+    repeating-linear-gradient(45deg, rgba(255, 69, 0, 0.03) 0px, rgba(255, 69, 0, 0.03) 2px, 
+    transparent 2px, transparent 8px);
+  animation: patternMove 20s linear infinite;
 }
 
-.home-background::before {
+.animated-background::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 69, 0, 0.05) 0%, transparent 50%);
-  animation: pulseGlow 4s ease-in-out infinite;
-}
-
-/* Floating shapes animation */
-.floating-shapes {
-  position: fixed;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.shape {
-  position: absolute;
-  background: linear-gradient(45deg, rgba(255, 69, 0, 0.1), rgba(255, 140, 90, 0.1));
-  border-radius: 50%;
-  animation: float 15s infinite;
-}
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes pulseGlow {
-  0% { opacity: 0.3; }
-  50% { opacity: 0.6; }
-  100% { opacity: 0.3; }
-}
-
-@keyframes float {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(10px, 10px) rotate(90deg); }
-  50% { transform: translate(0, 20px) rotate(180deg); }
-  75% { transform: translate(-10px, 10px) rotate(270deg); }
-  100% { transform: translate(0, 0) rotate(360deg); }
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(255, 69, 0, 0.1) 0%, transparent 10%),
+    radial-gradient(circle at 70% 70%, rgba(255, 140, 90, 0.1) 0%, transparent 20%);
+  filter: blur(3px);
+  animation: floatingDots 10s ease-in-out infinite alternate;
 }
 
 /* Enhanced card styles */
@@ -194,7 +189,7 @@
     inset 0 0 20px rgba(255, 255, 255, 0.5) !important;
 }
 
-/* Enhanced text hover effects */
+/* Text hover effects */
 .about-text {
   position: relative;
   z-index: 1;
@@ -218,7 +213,7 @@
   transform: scaleX(1);
 }
 
-/* Enhanced role badges */
+/* Role badge styles */
 .role-badge {
   position: relative;
   overflow: hidden;
@@ -240,21 +235,22 @@
   animation: shine 1.5s infinite;
 }
 
-@keyframes shine {
-  0% { transform: translateX(-100%) rotate(45deg); }
-  100% { transform: translateX(100%) rotate(45deg); }
-}
-
-/* Responsive adjustments */
+/* Mobile Optimization */
 @media (max-width: 768px) {
-  .shape {
-    display: none;
+  .container { 
+    padding: 1rem; 
   }
-  
-  .home-background {
-    background: 
-      linear-gradient(120deg, rgba(255, 240, 230, 0.9), rgba(255, 250, 245, 0.95)),
-      repeating-linear-gradient(45deg, rgba(255, 69, 0, 0.03) 0px, rgba(255, 69, 0, 0.03) 2px, transparent 2px, transparent 8px);
+  .profile-card { 
+    padding: 1.5rem !important; 
+  }
+  .about-text { 
+    font-size: 1rem !important; 
+  }
+  .animated-background::before {
+    background-size: 15px 15px;
+  }
+  .animated-background::after {
+    opacity: 0.5;
   }
 }
 </style>
