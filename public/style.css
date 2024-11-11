@@ -1350,3 +1350,40 @@ h4, .aboutme {
     padding-bottom: 0.25rem;
 }
 
+/* Certificate Cards Styling */
+.certificate .achievement-card {
+    transition: all 0.4s ease;
+    margin-bottom: 2rem !important;
+}
+
+.certificate .card-body {
+    padding: 1.5rem !important;
+    height: auto !important;
+}
+
+.certificate .achievement-box {
+    background: linear-gradient(45deg, rgba(255, 126, 61, 0.1), rgba(255, 154, 95, 0.1));
+    border-left: 4px solid #ff7e3d;
+    border-radius: 0 8px 8px 0;
+    padding: 1rem;
+    margin: 0;
+    height: auto !important;
+}
+
+.certificate .achievement-text {
+    margin: 0 !important; /* Remove all margins */
+    padding: 0 !important; /* Remove all padding */
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Remove any extra spacing */
+.certificate .card {
+    height: auto !important;
+}
+
+.certificate p {
+    margin-bottom: 0 !important; /* Remove bottom margin from paragraphs */
+}
+
