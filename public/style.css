@@ -1818,3 +1818,29 @@ h4, .aboutme {
     animation-duration: 1s;
     cursor: default;
 }
+
+/* Add these styles after your existing .mega-title styles (around line 1592) */
+.mega-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards 0.5s;
+}
+
+/* Add this new specific style for the name */
+.highlight-name {
+    background: none !important; /* Remove any gradient background */
+    -webkit-background-clip: initial !important; /* Remove background clipping */
+    -webkit-text-fill-color: #000 !important; /* Force black text color */
+    color: #000 !important; /* Fallback color */
+    font-weight: 600 !important;
+    opacity: 1 !important;
+    text-shadow: none !important; /* Remove any text shadow */
+}
+
+/* Keep the gradient only for "Hi, I'm" */
+.mega-title > span:first-child {
+    background: linear-gradient(45deg, var(--dark-orange), var(--light-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
