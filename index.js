@@ -18,23 +18,40 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.get("/",(req,res)=>{
-    res.render("index.ejs");
+    res.render("index.ejs", {
+        nextPage: 'education',
+        nextPageTitle: 'Education'
+    });
 });
 app.get("/skills",(req,res)=>{
-    res.render("skills.ejs");
+    res.render("skills.ejs", {
+        nextPage: 'projects',
+        nextPageTitle: 'Projects'
+    });
 });
 app.get("/education",(req,res)=>{
-    res.render("education.ejs");
+    res.render("education.ejs", {
+        nextPage: 'skills',
+        nextPageTitle: 'Skills'
+    });
 });
 app.get("/achievements",(req,res)=>{
-    res.render("achievements.ejs");
+    res.render("achievements.ejs", {
+        nextPage: 'experience',
+        nextPageTitle: 'Experience'
+    });
 });
 app.get('/projects', function(req, res) {
-   
-    res.render('projects.ejs');
+    res.render('projects.ejs', {
+        nextPage: 'experience',
+        nextPageTitle: 'Experience'
+    });
 });
 app.get("/experience",(req,res)=>{
-    res.render("experience.ejs");
+    res.render("experience.ejs", {
+        nextPage: 'achievements',
+        nextPageTitle: 'Achievements'
+    });
 })
 app.listen(8080, () => {
     console.log("Server is running on port 8080");
