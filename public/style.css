@@ -1984,3 +1984,65 @@ h4, .aboutme {
         font-size: 1rem;
     }
 }
+
+/* Thank You Section Styling */
+.thank-you-section {
+    text-align: center;
+    padding: 4rem 0 2rem 0;
+    margin-top: 3rem;
+    border-top: 2px solid rgba(255, 107, 43, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.thank-you-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.thank-you-title {
+    font-size: 2rem;
+    color: var(--dark-orange);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, var(--dark-orange), var(--light-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.thank-you-text {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.thank-you-decoration {
+    font-size: 2rem;
+    color: var(--dark-orange);
+}
+
+.thank-you-decoration i {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
